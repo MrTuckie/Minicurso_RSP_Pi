@@ -1,0 +1,2 @@
+Faça acender uma sequência específica com os quatro led's para cada botão apertado separadamente.
+Faça acender os leds para representar, em binário, um número fornecido pelo o usuário. Verifique também se o número é menor que 16 e se é um inteiro.

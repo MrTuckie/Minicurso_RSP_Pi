@@ -1,0 +1,69 @@
+import discord
+import RPi.GPIO as GPIO
+import time
+from time import sleep
+
+TOKEN = 'NDcxODc2Mzk2Mzc4MjI2NzA4.DjrOBQ.5ZENnTzDHc--F8HM6guFrC2HXMk'
+
+# Definindo as opçoes da placa
+
+GPIO.setwarnings(False) # Desabilita uma interrupcao por causa de um "Warning"
+GPIO.setmode(GPIO.BOARD) # Definindo a orientaçao dos pinos
+
+
+# Definindo pinos de saída e entrada
+
+led_verde = 36
+led_amarelo = 37
+led_vermelho = 38
+led_azul = 40
+leds = [led_verde,led_amarelo,led_vermelho,led_azul]
+
+GPIO.setup(leds, GPIO.OUT)
+GPIO.output(leds,0)
+
+botao_verde = 29
+botao_amarelo = 31
+botao_vermelho = 33
+botao_azul = 35
+botoes = [botao_verde,botao_amarelo,botao_vermelho,botao_azul]
+
+GPIO.setup(botoes, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+
+client = discord.Client()
+
+@client.event
+async def on_message(message):
+    # we do not want the bot to reply to itself
+    if message.author == client.user:
+        return
+
+    if message.content.startswith('!hello'):
+        msg = 'hello, {0.author.mention}'.format(message)
+        await client.send_message(message.channel, msg)
+    if message.content.startswith('!seq1'):
+        GPIO.output(led_azul,1)
+        time.sleep(1)
+        GPIO.output(led_azul,0)
+    if message.content.startswith('!seq2'):
+        for x in range(10):
+            GPIO.output(leds,1)
+            time.sleep(0.5)
+            GPIO.output(leds,0)
+            time.sleep(0.5)
+
+    if message.content.startswith('!seq3'):
+        None
+    if message.content.startswith('!desliga'):
+        None
+
+
+
+@client.event
+async def on_ready():
+    print('Logged in as')
+    print(client.user.name)
+    print(client.user.id)
+    print('------')
+
+client.run(TOKEN)

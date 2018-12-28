@@ -1,0 +1,8 @@
+Para abrir o crontab:
+
+sudo crontab -e
+
+Você escreve o período de execução e o comando na última linha
+
+@reboot sudo python3.5 "/home/pi/Desktop/Minicurso_RSP_Pi/remoto/telepot1.py"
+10 * * * * sudo python3.5 "/home/pi/Desktop/Minicurso_RSP_Pi/Blink/Blink 1.py"

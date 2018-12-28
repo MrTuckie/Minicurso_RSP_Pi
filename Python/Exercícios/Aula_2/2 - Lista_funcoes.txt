@@ -1,0 +1,5 @@
+﻿Fazer uma função que soma 3 números quaisquer.
+Fazer uma função que faz a média de 5 números quaisquer.
+Calcular a média de 'n' números fornecidos. Se for dado uma letra, a função deve retornar a média ali.
+Fazer a sequência de fibonacci até um número natural 'n' dado pelo teclado*.
+Calcular o fatorial de um número natural.

@@ -1,0 +1,5 @@
+Criar um arquivo chamado 'mod1.py' e 'main.py' em uma pasta com o nome 'testes'. Faça uma função em 'mod1.py' que imprime hello world quando chamada.
+Faça um docstring também. Na função main.py, execute essa função.
+
+Alterar a função para imprimir hello world para um número inteiro dado pelo usuário.
+Se for maior que dez ou menor que 2, faça pedir outro número.

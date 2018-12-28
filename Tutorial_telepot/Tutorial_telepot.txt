@@ -1,0 +1,29 @@
+## Passo a passo de como fazer um bot no telegram com a Raspberry Pi.
+
+No celular:
+
+1 - Baixar o telegram no celular;
+2 - Adicionar o @Botfather nos seus contatos (ele quem criará seu bot);
+3 - Seguir as instruções a partir de /newbot;
+4 - Dar um nome para o bot. Ex: My first bot, Quarto da Maria;
+5 - Dar um username para o bot. Ex: quarto_maria_bot;
+Opcional - Dar uma foto de imagem para o bot;
+
+No Pc ou Raspberry Pi:
+
+1 - Salvar o token do celular na Raspberry Pi em um arquivo .txt -> Essa parte vai ser um pouco chata;
+2 - Abrir o terminal do linux (Ctrl + t)
+3 - Instalar a biblioteca do telepot com: sudo pip3 install telepot
+4 - Criar um arquivo .py para começar os testes.
+
+No arquivo:
+
+1 - Importe a biblioteca instalada: import telepot
+2 - Importe a biblioteca para facilitar o "print": from pprint import pprint
+3 - Chamando o bot no código: meuBot = telepot.Bot(' A token do seu bot aqui que foi salva no .txt ')
+4 - Recebendo as primeiras mensagens: mensagens = meuBot.getUpdates()
+5 - Imprimindo as primeiras mensagens: pprint (mensagens)
+
+
+
+

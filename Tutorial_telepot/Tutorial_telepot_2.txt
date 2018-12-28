@@ -1,0 +1,11 @@
+## Segunda parte de como criar o bot.
+
+No novo arquivo:
+
+1 - Lembre de adicionar as bibliotecas:
+import telepot
+import time
+from telepot.loop import MessageLoop
+from pprint import pprint
+
+2 - 

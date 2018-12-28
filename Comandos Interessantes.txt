@@ -1,0 +1,7 @@
+Comandos interessantes para usar no terminal do Raspberry Pi
+
+Para lembrar os pinos da placa:
+$ gpio
+$ pinout
+$ sudo crontab -e
+
